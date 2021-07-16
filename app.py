@@ -1,3 +1,4 @@
+from flask_bootstrap import Bootstrap
 from flask import Flask, render_template, request
 from flask_cors import CORS
 from models import create_post, get_posts
@@ -5,6 +6,8 @@ from models import create_post, get_posts
 # from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+bootstrap = Bootstrap(app)
+app.config['BOOTSTRAP_BOOTSWATCH_THEME'] = 'cyborg'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 # db = SQLAlchemy(app)
 
